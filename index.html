@@ -321,11 +321,17 @@
             <input class="search" id="session-search" type="search" placeholder="Search sessions…" aria-label="Search sessions" />
           </div>
           <div class="session-grid" id="session-grid">
-            <article class="session-card" data-origin="guild" data-type="session" data-date="2026-09-17T13:00" data-search="penndot build guild first session topic tbd september 17 1pm est">
+            <article class="session-card" data-origin="guild" data-type="session" data-date="2026-11-12T13:00" data-search="penndot build guild november 12 monthly session upcoming topic tbd 1pm est">
               <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>PennDOT Build Guild session</p>
-              <div class="session-top"><div class="date-block">September 2026<b>17</b></div><span class="tag">First session</span></div>
-              <div class="session-content"><h3>Topic TBD</h3><p>Join us for the inaugural PennDOT Build Guild conversation. We'll kick off with a live discussion on practical AI-assisted development and the ideas we want to explore next.</p></div>
-              <div class="session-footer"><span>1:00–1:45 PM EST</span><span>Topic to be announced</span></div>
+              <div class="session-top"><div class="date-block">November 2026<b>12</b></div><span class="tag">Upcoming</span></div>
+              <div class="session-content"><h3>Topic TBD</h3><p>Join us for the PennDOT Build Guild monthly conversation. Session topic to be announced.</p></div>
+              <div class="session-footer"><span>1:00–1:45 PM ET</span><span>Topic to be announced</span></div>
+            </article>
+            <article class="session-card" data-origin="guild" data-type="session" data-date="2026-12-10T13:00" data-search="penndot build guild december 10 monthly session upcoming topic tbd 1pm est">
+              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>PennDOT Build Guild session</p>
+              <div class="session-top"><div class="date-block">December 2026<b>10</b></div><span class="tag">Upcoming</span></div>
+              <div class="session-content"><h3>Topic TBD</h3><p>Join us for the PennDOT Build Guild monthly conversation. Session topic to be announced.</p></div>
+              <div class="session-footer"><span>1:00–1:45 PM ET</span><span>Topic to be announced</span></div>
             </article>
             <article class="session-card" data-origin="guild" data-type="session" data-date="2026-08-19T13:00" data-search="penndot build guild august 19 copilot optimization context engineering prompts models agents memory">
               <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>PennDOT Build Guild session</p>
@@ -415,7 +421,14 @@
         const ordered = Array.from(grid.querySelectorAll(".session-card")).sort((a, b) => {
           const sessionDiff = Number(isSessionCard(b)) - Number(isSessionCard(a));
           if (sessionDiff) return sessionDiff;
-          return isSessionCard(a) ? cardTime(b) - cardTime(a) : cardTime(a) - cardTime(b);
+          if (!isSessionCard(a)) return cardTime(a) - cardTime(b);
+          const aTime = cardTime(a);
+          const bTime = cardTime(b);
+          const now = Date.now();
+          const aUpcoming = aTime >= now;
+          const bUpcoming = bTime >= now;
+          if (aUpcoming !== bUpcoming) return Number(bUpcoming) - Number(aUpcoming);
+          return aUpcoming ? aTime - bTime : bTime - aTime;
         });
         ordered.forEach((card) => grid.appendChild(card));
         return ordered;

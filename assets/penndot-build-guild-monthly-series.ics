@@ -4,10 +4,22 @@ PRODID:-//PennDOTBuildGuild//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:penndot-build-guild-monthly-series-2026@pennDOTbuildguild
-DTSTAMP:20261014T150000Z
-DTSTART;TZID=America/New_York:20260917T130000
-DTEND;TZID=America/New_York:20260917T134500
+UID:penndot-build-guild-november-12-2026@pennDOTbuildguild
+DTSTAMP:20261014T162000Z
+DTSTART;TZID=America/New_York:20261112T130000
+DTEND;TZID=America/New_York:20261112T134500
+SUMMARY:PennDOT | Build Guild Monthly series
+LOCATION:Microsoft Teams Meeting
+DESCRIPTION:PennDOT Build Guild is a monthly community of practice for developers and enthusiasts learning, sharing, and building with GitHub Copilot.\n\nWebsite: https://msftaustin.github.io/PennDOTBuildGuild
+URL:https://msftaustin.github.io/PennDOTBuildGuild
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:penndot-build-guild-december-10-2026@pennDOTbuildguild
+DTSTAMP:20261014T162000Z
+DTSTART;TZID=America/New_York:20261210T130000
+DTEND;TZID=America/New_York:20261210T134500
 SUMMARY:PennDOT | Build Guild Monthly series
 LOCATION:Microsoft Teams Meeting
 DESCRIPTION:PennDOT Build Guild is a monthly community of practice for developers and enthusiasts learning, sharing, and building with GitHub Copilot.\n\nWebsite: https://msftaustin.github.io/PennDOTBuildGuild
