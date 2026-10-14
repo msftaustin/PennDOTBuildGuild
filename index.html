@@ -194,7 +194,12 @@
       .empty { display: none; padding: 30px; border: 1px dashed var(--cp-border-strong); border-radius: 16px; color: var(--cp-text-muted); text-align: center; }
       .empty.show { display: block; }
       .notes-panel { margin-top: 24px; padding: 24px; border: 1px solid var(--cp-border); border-radius: 16px; background: var(--cp-surface); }
-      .notes-panel h3 { margin: 0 0 18px; font-size: 1.5rem; letter-spacing: -0.04em; }
+      .notes-panel summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; list-style: none; }
+      .notes-panel summary::-webkit-details-marker { display: none; }
+      .notes-panel summary::after { content: "Show notes"; flex: 0 0 auto; color: var(--cp-link); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+      .notes-panel[open] summary { margin-bottom: 18px; }
+      .notes-panel[open] summary::after { content: "Hide notes"; }
+      .notes-title { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.04em; }
       .notes-panel h4 { margin: 20px 0 8px; color: var(--cp-link); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
       .notes-panel ul { margin: 0; padding-left: 22px; color: var(--cp-text-muted); }
       .notes-panel li + li { margin-top: 10px; }
@@ -328,74 +333,26 @@
               <div class="session-content"><h3>GitHub Copilot Optimization</h3><p>A practical conversation about quality-first optimization, context engineering, model selection, prompts, testing, and agent governance.</p></div>
               <div class="session-footer"><span>Meeting notes</span><a href="#august-19-notes">Read notes ↘</a></div>
             </article>
-            <article class="session-card" data-origin="external" data-type="workshop" data-date="2026-06-22T12:00" data-search="external event github copilot token optimization developer tools livestream english">
-              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · Microsoft Reactor</p>
-              <div class="session-top"><div class="date-block">June 2026<b>22</b></div><span class="tag">Workshop</span></div>
-              <div class="session-content"><h3>GitHub Copilot Token Optimization Deep Dive</h3><p>Explore practical techniques for improving GitHub Copilot workflows while reducing unnecessary token usage. Includes model selection, prompt design, and live demos.</p></div>
-              <div class="session-footer"><span>12:00–1:00 PM ET</span><a href="https://developer.microsoft.com/en-us/reactor/events/27334/" target="_blank" rel="noreferrer">View event ↗</a></div>
-            </article>
-            <article class="session-card" data-origin="external" data-type="showcase" data-date="2026-10-07T12:00" data-search="external event spend smarter optimizing copilot tokens without slowing builders github demo days">
-              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · GitHub Demo Days</p>
-              <div class="session-top"><div class="date-block">October 2026<b>7</b></div><span class="tag">Demo</span></div>
-              <div class="session-content"><h3>Spend Smarter: Optimizing Copilot Tokens Without Slowing Builders</h3><p>Learn how to reduce token waste, match the right model to each task, and set practical limits that protect budget without hurting delivery speed.</p></div>
-              <div class="session-footer"><span>12:00–12:45 PM EDT</span><a href="https://github.registration.goldcast.io/webinar/319dc29a-5c6d-4b09-afc3-22da968edfbb" target="_blank" rel="noreferrer">Register ↗</a></div>
-            </article>
-            <article class="session-card" data-origin="external" data-type="showcase" data-date="2026-09-10T08:00" data-search="external event github copilot day new releases real workflows live coding youtube live webinar">
-              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · GitHub</p>
-              <div class="session-top"><div class="date-block">September 2026<b>10</b></div><span class="tag">YouTube Live</span></div>
-              <div class="session-content"><h3>GitHub Copilot Day</h3><p>New releases, real workflows, and live coding in a live webinar from GitHub.</p></div>
-              <div class="session-footer"><span>8:00 AM–12:00 PM PT</span><a href="https://www.youtube.com/live/0kOXsQUNzss" target="_blank" rel="noreferrer">Watch live ↗</a></div>
-            </article>
-            <article class="session-card" data-origin="external" data-type="showcase" data-date="2026-09-29T12:00" data-search="external event github copilot token optimization webinar controlling spend insight">
-              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · Insight</p>
-              <div class="session-top"><div class="date-block">September 2026<b>29</b></div><span class="tag">Webinar</span></div>
-              <div class="session-content"><h3>Controlling GitHub Copilot Spend</h3><p>Join Insight and GitHub for practical guidance that supports more informed AI investment decisions.</p></div>
-              <div class="session-footer"><span>12:00 PM ET</span><a href="https://www.insight.com/en_US/content-and-resources/webinars/controlling-github-copilot-spend.html" target="_blank" rel="noreferrer">Register ↗</a></div>
-            </article>
-            <article class="session-card" data-origin="external" data-type="showcase" data-date="2026-10-06T14:00" data-search="external event github copilot token optimization webinar usage based billing xebia">
-              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · Xebia</p>
-              <div class="session-top"><div class="date-block">October 2026<b>6</b></div><span class="tag">Webinar</span></div>
-              <div class="session-content"><h3>Master GitHub Copilot Usage-Based Billing</h3><p>Join Xebia and GitHub for a live webinar to learn more about GitHub Copilot's usage-based billing model.</p></div>
-              <div class="session-footer"><span>2:00 PM CEST</span><a href="https://events.xebia.com/master-github-usage-based-billing-oct-6" target="_blank" rel="noreferrer">Register ↗</a></div>
-            </article>
-            <article class="session-card" data-origin="external" data-type="showcase" data-date="2026-10-07T14:00" data-search="external event github copilot token optimization webinar optimize costs productivity andela">
-              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · Andela</p>
-              <div class="session-top"><div class="date-block">October 2026<b>7</b></div><span class="tag">Webinar</span></div>
-              <div class="session-content"><h3>Optimize GitHub Copilot Token Costs &amp; Boost Productivity</h3><p>Join Andela and GitHub for a webinar designed for technology and finance leaders managing AI coding costs.</p></div>
-              <div class="session-footer"><span>2:00 PM BST</span><a href="https://www.andela.com/webinar/optimize-github-copilot-token-costs/october" target="_blank" rel="noreferrer">Register ↗</a></div>
-            </article>
-            <article class="session-card" data-origin="external" data-type="showcase" data-date="2026-10-12T11:30" data-search="external event github copilot token optimization webinar usage based billing budgets ai credits canarys">
-              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · Canarys</p>
-              <div class="session-top"><div class="date-block">October 2026<b>12</b></div><span class="tag">Webinar</span></div>
-              <div class="session-content"><h3>Understanding Budgets for Usage Based Billing</h3><p>Join Canarys and GitHub for a live webinar about GitHub AI Credits and budgeting.</p></div>
-              <div class="session-footer"><span>11:30 AM IST</span><a href="https://canaryswebinar.ecanarys.com/" target="_blank" rel="noreferrer">Register ↗</a></div>
-            </article>
-            <article class="session-card" data-origin="external" data-type="showcase" data-date="2026-10-13T14:00" data-search="external event github copilot token optimization webinar usage based billing xebia">
-              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · Xebia</p>
-              <div class="session-top"><div class="date-block">October 2026<b>13</b></div><span class="tag">Webinar</span></div>
-              <div class="session-content"><h3>Master GitHub Copilot Usage-Based Billing</h3><p>Join Xebia and GitHub for a live webinar to learn more about GitHub Copilot's usage-based billing model.</p></div>
-              <div class="session-footer"><span>2:00 PM CEST</span><a href="https://events.xebia.com/master-github-usage-based-billing-oct-13" target="_blank" rel="noreferrer">Register ↗</a></div>
-            </article>
-            <article class="session-card" data-origin="external" data-type="showcase" data-date="2026-10-14T11:00" data-search="external event github copilot token optimization webinar agent quality outcomes token spend slalom">
-              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · Slalom</p>
-              <div class="session-top"><div class="date-block">October 2026<b>14</b></div><span class="tag">Webinar</span></div>
-              <div class="session-content"><h3>Agent Quality, Optimized: Improving Outcomes While Managing Token Spend</h3><p>Join Slalom and GitHub to learn how to improve agent quality while managing token consumption and costs.</p></div>
-              <div class="session-footer"><span>11:00 AM BST</span><a href="https://events.teams.microsoft.com/event/474970f0-e74e-4c86-b8f1-7564a629b055@9ca75128-a244-4596-877b-f24828e476e2?source=copyLinkLegacyShareLinkDialog" target="_blank" rel="noreferrer">Register ↗</a></div>
-            </article>
             <article class="session-card" data-origin="external" data-type="showcase" data-date="2026-10-20T11:00" data-search="external event github copilot token optimization webinar agent quality outcomes token spend slalom">
               <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · Slalom</p>
               <div class="session-top"><div class="date-block">October 2026<b>20</b></div><span class="tag">Webinar</span></div>
               <div class="session-content"><h3>Agent Quality, Optimized: Improving Outcomes While Managing Token Spend</h3><p>Join Slalom and GitHub to learn how to improve agent quality while managing token consumption and costs.</p></div>
               <div class="session-footer"><span>11:00 AM ET</span><a href="https://events.teams.microsoft.com/event/67a15b24-910a-4417-8b05-c0c388e51cc6@9ca75128-a244-4596-877b-f24828e476e2?source=copyLinkLegacyShareEventDialog" target="_blank" rel="noreferrer">Register ↗</a></div>
             </article>
+            <article class="session-card" data-origin="external" data-type="showcase" data-date="2026-10-28T00:00" data-search="external event github universe 2026 developer conference ai software innovation">
+              <p class="card-origin"><span class="origin-dot" aria-hidden="true"></span>External event · GitHub</p>
+              <div class="session-top"><div class="date-block">October 2026<b>28–29</b></div><span class="tag">Conference</span></div>
+              <div class="session-content"><h3>GitHub Universe 2026</h3><p>Join GitHub's global developer conference virtually for two days of announcements, technical sessions, and ideas shaping the future of software.</p></div>
+              <div class="session-footer"><span>Two-day virtual event</span><a href="https://githubuniverse.com/" target="_blank" rel="noreferrer">Register ↗</a></div>
+            </article>
           </div>
           <div class="empty" id="empty-state">No sessions match that search. Try another topic or choose “All sessions.”</div>
         </div>
       </section>
-      <section class="section" id="august-19-notes">
+      <section class="section" aria-label="Session notes">
         <div class="shell">
-          <div class="notes-panel">
-            <h3>August 19 meeting notes</h3>
+          <details class="notes-panel" id="august-19-notes">
+            <summary><span class="notes-title">August 19 meeting notes</span></summary>
             <p><strong>Topic:</strong> GitHub Copilot optimization, context engineering, model selection, and agent governance</p>
             <ul>
               <li><strong>Quality-First Copilot Optimization:</strong> Kenedy explained that teams should optimize GitHub Copilot for reliable, maintainable code and developer ROI rather than minimizing token counts, using deliberate planning, frequent testing, and controlled agent usage to avoid compounding errors.</li>
@@ -436,7 +393,7 @@
               <li><strong>Copilot Memory Availability:</strong> Confirm when Copilot memory reaches general availability and whether it is enabled for the participants’ organization. (Kenedy)</li>
               <li><strong>Future Session Preparation:</strong> Bring existing Copilot customizations, skills, agents, and effective prompts to the next session for potential community sharing. (Participants)</li>
             </ul>
-          </div>
+          </details>
         </div>
       </section>
     </main>
@@ -485,6 +442,21 @@
         renderSessions();
       }));
       search.addEventListener("input", renderSessions);
+      function openLinkedNotes() {
+        if (!location.hash) return;
+        const target = document.querySelector(location.hash);
+        if (target instanceof HTMLDetailsElement && target.classList.contains("notes-panel")) {
+          target.open = true;
+        }
+      }
+      document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener("click", () => {
+        const target = document.querySelector(link.hash);
+        if (target instanceof HTMLDetailsElement && target.classList.contains("notes-panel")) {
+          target.open = true;
+        }
+      }));
+      window.addEventListener("hashchange", openLinkedNotes);
+      openLinkedNotes();
       document.querySelectorAll(".notes-link").forEach((link) => link.addEventListener("click", (event) => {
         event.preventDefault();
         link.textContent = "Notes coming soon";
